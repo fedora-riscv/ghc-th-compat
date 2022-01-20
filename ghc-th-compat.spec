@@ -11,7 +11,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.1.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Backward- (and forward-)compatible Quote and Code types
 
 License:        BSD
@@ -123,6 +123,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.2-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
 * Sat Oct 30 2021 Jens Petersen <petersen@redhat.com> - 0.1.2-2
 - disable tests on armv7hl in line with current th-orphans
 
