@@ -10,17 +10,19 @@
 %endif
 
 Name:           ghc-%{pkg_name}
-Version:        0.1.2
-Release:        3%{?dist}
+Version:        0.1.3
+Release:        1%{?dist}
 Summary:        Backward- (and forward-)compatible Quote and Code types
 
 License:        BSD
 Url:            https://hackage.haskell.org/package/%{pkg_name}
 # Begin cabal-rpm sources:
 Source0:        https://hackage.haskell.org/package/%{pkgver}/%{pkgver}.tar.gz
+Source1:        https://hackage.haskell.org/package/%{pkgver}/%{pkg_name}.cabal#/%{pkgver}.cabal
 # End cabal-rpm sources
 
 # Begin cabal-rpm deps:
+BuildRequires:  dos2unix
 BuildRequires:  ghc-Cabal-devel
 BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-base-prof
@@ -80,6 +82,7 @@ This package provides the Haskell %{pkg_name} profiling library.
 %prep
 # Begin cabal-rpm setup:
 %setup -q -n %{pkgver}
+dos2unix -k -n %{SOURCE1} %{pkg_name}.cabal
 # End cabal-rpm setup
 
 
@@ -123,6 +126,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Tue Jun 07 2022 Jens Petersen <petersen@redhat.com> - 0.1.3-1
+- https://hackage.haskell.org/package/th-compat-0.1.3/changelog
+
 * Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.2-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
