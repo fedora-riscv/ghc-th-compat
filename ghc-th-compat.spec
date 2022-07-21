@@ -11,7 +11,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Backward- (and forward-)compatible Quote and Code types
 
 License:        BSD
@@ -126,6 +126,9 @@ dos2unix -k -n %{SOURCE1} %{pkg_name}.cabal
 
 
 %changelog
+* Thu Jul 21 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.3-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
+
 * Tue Jun 07 2022 Jens Petersen <petersen@redhat.com> - 0.1.3-1
 - https://hackage.haskell.org/package/th-compat-0.1.3/changelog
 
