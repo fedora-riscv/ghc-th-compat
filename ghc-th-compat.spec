@@ -5,13 +5,13 @@
 %global pkgver %{pkg_name}-%{version}
 
 # due to th-orphans: remove when moving Rawhide to 0.1.3
-%ifnarch armv7hl
+%ifnarch armv7hl riscv64
 %bcond_without tests
 %endif
 
 Name:           ghc-%{pkg_name}
 Version:        0.1.4
-Release:        %autorelease
+Release:        %autorelease -e 0.rv64
 Summary:        Backward- (and forward-)compatible Quote and Code types
 
 License:        BSD-3-Clause
